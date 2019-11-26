@@ -46,12 +46,20 @@ class CardConcert extends React.Component {
          
          
              <Card key={item.id}>
-                 <Card.Img variant="top" src="https://images.pexels.com/photos/3133685/pexels-photo-3133685.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" />
-                 <Card.Body>
-                     <Card.Title>{item.chanteur}</Card.Title>
+               <Card.Body className="p-0">
+                   <div className="row">
+                       <div className="col-5 p-0">
+                        <Card.Img variant="top" src="https://images.pexels.com/photos/3133685/pexels-photo-3133685.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" />
+                       </div>
+                       <div className="col-7 text-center p-0 text-card mt-4">
+                       <Card.Title>{item.chanteur}</Card.Title>
                      <Card.Text>
                      {item.designation}
                      </Card.Text>
+                       </div>
+                   </div>
+                
+                     
                  </Card.Body>
                  <Card.Footer>
                      <small className="text-muted">Date du concert</small>

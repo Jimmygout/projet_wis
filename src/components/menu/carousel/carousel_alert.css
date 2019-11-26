@@ -1,5 +1,8 @@
 .carousel_alert
 {
-  height: 140px;
+  height: 80px;
   background-color: red;
+}
+.caption_alert {
+  bottom: 10px !important;
 }

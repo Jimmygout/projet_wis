@@ -1,0 +1,8 @@
+.carousel_nouvelle
+{
+  height: 80px;
+  background-color: grey;
+}
+.caption_nouvelle {
+  bottom: 10px !important;
+}

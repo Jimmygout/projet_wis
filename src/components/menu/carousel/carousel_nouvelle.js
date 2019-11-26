@@ -1,7 +1,7 @@
 import React from 'react';
 import {Spinner, Carousel} from "react-bootstrap";
-import './carousel_alert.css';
-class CarouselAlert extends React.Component {
+import './carousel_nouvelle.css';
+class CarouselNouvelle extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +12,7 @@ class CarouselAlert extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://127.0.0.1:8000/api/alerts.json")
+        fetch("https://127.0.0.1:8000/api/nouvelles.json")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -42,9 +42,9 @@ class CarouselAlert extends React.Component {
 
 <Carousel>
     {items.map(item => ( 
-    <Carousel.Item key={item.id} className="carousel_alert">
-        <Carousel.Caption className="caption_alert">
-            <h3>{item.designation}</h3>
+    <Carousel.Item key={item.id} className="carousel_nouvelle">
+        <Carousel.Caption className="caption_nouvelle">
+            <p>{item.designation}</p>
             
         </Carousel.Caption>
     </Carousel.Item>           
@@ -58,4 +58,4 @@ class CarouselAlert extends React.Component {
     }
 }
 
-export default CarouselAlert;
+export default CarouselNouvelle;
